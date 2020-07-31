@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>OTP Generator</h2>
+ <button id="btn", style="box-sizing: border-box; width: 163px; color:darkblue; font-size: 15px;" onclick="generateNumber();">Click here to generate OTP</button>
+</br>
+    <div>
+        <input type="number" id="num1" readonly="true" style="width: 30px; font-size: 25px; text-align: center; color:lawngreen; background-color: black;" >
+        <input type="number" id="num2" readonly="true" style="width: 30px; font-size: 25px; text-align: center; color:lawngreen; background-color: black;">
+        <input type="number" id="num3" readonly="true" style="width: 30px; font-size: 25px; text-align: center; color:lawngreen; background-color: black;">
+        <input type="number" id="num4" readonly="true" style="width: 30px; font-size: 25px; text-align: center; color:lawngreen; background-color: black;">
+    </div>
+    <script>
+        //Generating 4 digit OTP
+        function generateNumber(){
+            for(let i=1; i<=4;i++)
+            {
+            let randomnumber = Math.floor(Math.random()*10);
+            document.getElementById(`num${i}`).value=randomnumber;
+            }
+        }
+        
+        
+
+    </script>
+</body>
+</html>
